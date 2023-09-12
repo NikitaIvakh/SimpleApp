@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,9 +28,7 @@ namespace SimpleApp.WPF
             foreach (UIElement uIElement in MainRoot.Children)
             {
                 if (uIElement is Button button)
-                {
                     button.Click += Button_Click;
-                }
             }
         }
 
@@ -39,6 +38,12 @@ namespace SimpleApp.WPF
 
             if (text == "AC")
                 textLabel.Text = string.Empty;
+
+            else if (text == "=")
+            {
+                string value = new DataTable().Compute(textLabel.Text, null).ToString();
+                textLabel.Text = value;
+            }
 
             else
                 textLabel.Text += text;
