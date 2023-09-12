@@ -36,7 +36,12 @@ namespace SimpleApp.WPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string text = (string)((Button)e.OriginalSource).Content;
-            textLabel.Text += text;
+
+            if (text == "AC")
+                textLabel.Text = string.Empty;
+
+            else
+                textLabel.Text += text;
         }
     }
 }
