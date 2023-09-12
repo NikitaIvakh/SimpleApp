@@ -23,6 +23,20 @@ namespace SimpleApp.WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            foreach (UIElement uIElement in MainRoot.Children)
+            {
+                if (uIElement is Button button)
+                {
+                    button.Click += Button_Click;
+                }
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string text = (string)((Button)e.OriginalSource).Content;
+            textLabel.Text += text;
         }
     }
 }
