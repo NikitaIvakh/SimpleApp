@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="Calculator" Height="350" Width="500" WindowStyle="ThreeDBorderWindow">
     <Grid x:Name="MainRoot" Background="White">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
     </Grid>
 </Window>
